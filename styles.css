@@ -62,7 +62,7 @@ ul {
   list-style: none;
 }
 body {
-  margin-top: clamp(3.5rem, 2.532rem + 4.131vw, 6.25rem);
+  padding-top: clamp(3.5rem, 2.532rem + 4.131vw, 6.25rem);
   background-color: var(--cream);
   line-height: 1.4;
   font-family: var(--font-base);
