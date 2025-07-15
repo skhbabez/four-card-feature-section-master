@@ -164,7 +164,7 @@ footer p {
 
 [data-card="1"] {
   grid-area: card1;
-  --border-color: var(--green);
+  --border-color: var(--cyan);
 }
 
 [data-card="2"] {
