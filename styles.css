@@ -18,6 +18,7 @@
 }
 
 :root {
+  --cream: hsl(0, 0%, 98%);
   --gray-500: hsl(234, 12%, 34%);
   --grey-400: hsl(212, 6%, 44%);
   --white: hsl(0, 0%, 100%);
@@ -25,29 +26,29 @@
   --cyan: hsl(180, 62%, 55%);
   --blue: hsl(212, 86%, 64%);
   --orange: hsl(34, 97%, 64%);
-  --spacing-100: 0.5rem;
-  --spacing-200: 1rem;
-  --spacing-300: 1.5rem;
-  --spacing-400: 2rem;
-  --spacing-500: 2.5rem;
-  --font-step-1: 0.8125rem; // 13px
-  --font-step-2: 0.9375rem; // 15px
-  --font-step-3: 1.25rem; // 20px
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 4.5rem;
+  --font-step-1: 0.8125rem; /* 13px */
+  --font-step-2: 0.9375rem; /* 15px */
+  --font-step-3: 1.25rem; /* 20px */
   --font-step-4: clamp(
     1.5rem,
     0.784rem + 3.053vw,
     2.25rem
-  ); // 24px - 36px from tablet to mobile
-  --font-base: Poppins, sans-serif;
+  ); /* 24px - 36px from tablet to mobile */
+  --font-base: "Poppins", sans-serif;
+  --border-radius: var(--spacing-100);
+  --border-color: var(--red);
 }
 
 *,
 ::after,
 ::before {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
 }
@@ -61,33 +62,43 @@ ul {
   list-style: none;
 }
 body {
-  background-color: var(--white);
-  line-height: 1.5;
-  min-height: 100dvh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  justify-content: center;
-  align-items: center;
+  margin-top: clamp(3.5rem, 2.532rem + 4.131vw, 6.25rem);
+  background-color: var(--cream);
+  line-height: 1.4;
   font-family: var(--font-base);
-  font-size: var(--font-step-1);
+  font-size: var(--font-step-2);
+  letter-spacing: 0.1px;
+  padding-inline: 1.90625rem;
 }
 
 h1 {
   font-size: clamp(1.5rem, 0.784rem + 3.053vw, 2.25rem);
-  font-weight: 200;
+  font-weight: 600;
+  letter-spacing: 0.25px;
 }
 
 h2 {
   font-size: var(--font-step-3);
   font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0ch;
 }
 
-strong {
-  font-weight: 600;
+header {
+  text-align: center;
+  margin-block-end: var(--spacing-600);
 }
 
-hgroup p {
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header p {
   font-size: var(--font-step-2);
+  margin-block-start: var(--spacing-200);
 }
 
 h1,
@@ -99,15 +110,95 @@ p {
   max-width: 60ch;
 }
 
-.subheading {
-  display: block;
-  font-weight: 600;
+a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
 
-.attribution {
-  font-size: 11px;
+footer p {
   text-align: center;
+  margin: auto;
+  margin-block-start: var(--spacing-400);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.subheading {
+  display: block;
+  font-weight: 200;
+  color: var(--gray-500);
+}
+
+.grid {
+  display: grid;
+  grid-template:
+    "card1"
+    "card2"
+    "card3"
+    "card4";
+  justify-items: center;
+  align-items: center;
+  gap: var(--spacing-400);
+}
+
+.card {
+  max-inline-size: clamp(19.625rem, 17.478rem + 9.16vw, 21.875rem);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-400);
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-bottom: 4px solid transparent;
+  background: linear-gradient(
+        var(--border-color, black),
+        var(--border-color, black)
+      )
+      top/100% 4px border-box no-repeat,
+    var(--white);
+}
+
+.card p {
+  line-height: 1.6;
+  letter-spacing: 0.09px;
+
+  font-size: var(--font-step-1);
+  margin-block-start: var(--spacing-100);
+  color: var(--grey-400);
+}
+
+[data-card="1"] {
+  grid-area: card1;
+  --border-color: var(--green);
+}
+
+[data-card="2"] {
+  grid-area: card2;
+  --border-color: var(--red);
+}
+
+[data-card="3"] {
+  grid-area: card3;
+  --border-color: var(--orange);
+}
+
+[data-card="4"] {
+  grid-area: card4;
+  --border-color: var(--blue);
+}
+
+.card img {
+  margin-inline-start: auto;
+  margin-block-start: var(--spacing-400);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template:
+      "card1 card1"
+      "card2 card3"
+      "card4 card4";
+  }
+}
+@media (min-width: 1440px) {
+  .grid {
+    grid-template:
+      "card1 card2 card4"
+      "card1 card3 card4";
+  }
 }
