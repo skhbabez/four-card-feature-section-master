@@ -30,6 +30,14 @@
   --spacing-300: 1.5rem;
   --spacing-400: 2rem;
   --spacing-500: 2.5rem;
+  --font-step-1: 0.8125rem; // 13px
+  --font-step-2: 0.9375rem; // 15px
+  --font-step-3: 1.25rem; // 20px
+  --font-step-4: clamp(
+    1.5rem,
+    0.784rem + 3.053vw,
+    2.25rem
+  ); // 24px - 36px from tablet to mobile
   --font-base: Poppins, sans-serif;
 }
 
@@ -52,7 +60,6 @@ img {
 ul {
   list-style: none;
 }
-
 body {
   background-color: var(--white);
   line-height: 1.5;
@@ -62,6 +69,39 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--font-base);
+  font-size: var(--font-step-1);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 0.784rem + 3.053vw, 2.25rem);
+  font-weight: 200;
+}
+
+h2 {
+  font-size: var(--font-step-3);
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hgroup p {
+  font-size: var(--font-step-2);
+}
+
+h1,
+h2 {
+  max-width: 50ch;
+}
+
+p {
+  max-width: 60ch;
+}
+
+.subheading {
+  display: block;
+  font-weight: 600;
 }
 
 .attribution {
