@@ -19,7 +19,7 @@
 
 :root {
   --cream: hsl(0, 0%, 98%);
-  --gray-500: hsl(234, 12%, 34%);
+  --grey-500: hsl(234, 12%, 34%);
   --grey-400: hsl(212, 6%, 44%);
   --white: hsl(0, 0%, 100%);
   --red: hsl(0, 78%, 62%);
@@ -99,6 +99,7 @@ article {
 header p {
   font-size: var(--font-step-2);
   margin-block-start: var(--spacing-200);
+  color: var(--grey-500);
 }
 
 h1,
@@ -124,7 +125,7 @@ footer p {
 .subheading {
   display: block;
   font-weight: 200;
-  color: var(--gray-500);
+  color: var(--grey-500);
 }
 
 .grid {
