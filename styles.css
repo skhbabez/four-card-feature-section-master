@@ -43,6 +43,12 @@
   --font-base: "Poppins", sans-serif;
   --border-radius: var(--spacing-100);
   --border-color: var(--red);
+  --letter-spacing-1: calc(
+    0.09ch / 8.16667
+  ); /*  conversion factor px to ch 8.16667px/ch*/
+  --letter-spacing-2: calc(0.1ch / 9.41667)
+    /*  conversion factor px to ch 9.41667px/ch*/;
+  --letter-spacing-3: calc(0.25ch / 23.25); /* 23,25px/ch */
 }
 
 *,
@@ -67,18 +73,17 @@ body {
   line-height: 1.4;
   font-family: var(--font-base);
   font-size: var(--font-step-2);
-  letter-spacing: 0.1px;
+  letter-spacing: var(--letter-spacing-2);
   padding-inline: 1.90625rem;
 }
 
 h1 {
   font-size: clamp(1.5rem, 0.784rem + 3.053vw, 2.25rem);
-  letter-spacing: 0.25px;
+  letter-spacing: var(--letter-spacing-3);
 }
 
 h2 {
   font-size: var(--font-step-3);
-
   line-height: 1.35;
   letter-spacing: 0ch;
 }
@@ -96,7 +101,6 @@ article {
 }
 
 header p {
-  font-size: var(--font-step-2);
   margin-block-start: var(--spacing-200);
   color: var(--grey-500);
 }
@@ -158,7 +162,7 @@ footer p {
 
 .card p {
   line-height: 1.6;
-  letter-spacing: 0.09px;
+  letter-spacing: var(--letter-spacing-1);
   font-size: var(--font-step-1);
   margin-block-start: var(--spacing-100);
   color: var(--grey-400);
@@ -189,7 +193,7 @@ footer p {
   margin-block-start: var(--spacing-400);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .grid {
     grid-template:
       "card1 card1"
@@ -197,7 +201,7 @@ footer p {
       "card4 card4";
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 90em) {
   .grid {
     grid-template:
       "card1 card2 card4"
