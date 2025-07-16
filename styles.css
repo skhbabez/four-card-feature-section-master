@@ -26,6 +26,7 @@
   --cyan: hsl(180, 62%, 55%);
   --blue: hsl(212, 86%, 64%);
   --orange: hsl(34, 97%, 64%);
+  --blue-dark: hsl(228, 45%, 44%);
   --spacing-100: 0.5rem; /* 8px */
   --spacing-200: 1rem; /* 16px */
   --spacing-300: 1.5rem; /* 24px */
@@ -68,7 +69,7 @@ ul {
   list-style: none;
 }
 body {
-  padding-top: clamp(3.5rem, 2.532rem + 4.131vw, 6.25rem);
+  padding-block-start: clamp(3.5rem, 2.532rem + 4.131vw, 6.25rem);
   background-color: var(--cream);
   line-height: 1.4;
   font-family: var(--font-base);
@@ -100,6 +101,10 @@ article {
   align-items: center;
 }
 
+p {
+  max-width: 60ch;
+}
+
 header p {
   margin-block-start: var(--spacing-200);
   color: var(--grey-500);
@@ -112,12 +117,8 @@ h2 {
   font-weight: 600;
 }
 
-p {
-  max-width: 60ch;
-}
-
 a {
-  color: hsl(228, 45%, 44%);
+  color: var(--blue-dark);
   text-decoration: none;
 }
 
