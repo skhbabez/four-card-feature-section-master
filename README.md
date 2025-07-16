@@ -13,8 +13,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -40,8 +38,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/skhbabez/four-card-feature-section-master](https://github.com/skhbabez/four-card-feature-section-master)
+- Live Site URL: [https://skhbabez.github.io/four-card-feature-section-master/](https://skhbabez.github.io/four-card-feature-section-master/)
 
 ## My process
 
@@ -52,62 +50,28 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CUBE Design Principles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I focused especially on utilizing some of the techniques showcased in Andy Bell's [video](https://www.youtube.com/watch?v=Iluhx2QWJDQ) on good modern practices. I liked the idea of utilizing css variables and trying to do as much globally as possible, which I tried to implement in this project. I also challenged myself to use grid more this time, since overfocused on flex in my last submissions. Using grid areas made this especially clean and I will probably utilize grid a lot more from now on
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.grid {
+  grid-template:
+    "card1 card1"
+    "card2 card3"
+    "card4 card4";
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I tend to be a little bit too perfectionist with these projects, focusiing too much on getting them to look exactly like the figma files. Bit i felt that this limited me here, not allowing me to explore some concepts. I want to experiment with creating responsive typescales and make my spacings more responsive in my next Projects, even if it means diverting a little from the figma files. I also want to look into css resets, maybe collecting the common resets i already did in past projects and create my own.
 
 ### Useful resources
 
 - [Stackoverflow](https://stackoverflow.com/questions/57153309/how-to-prevent-single-sided-border-from-wrapping-around-border-radius) - Trick to flatten the border.
 - [Clamp Calculator](https://www.marcbacon.com/tools/clamp-calculator/) - Great tool to speed up clamp calculations.
-- [Buildexcellentwebsites](https://buildexcellentwebsit.es/) - heavily used this as a reference and tried to incorporate some of the concepts showcased here.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- [Buildexcellentwebsites](https://buildexcellentwebsit.es/) - heavily used this as a reference and tried to incorporate some of the concepts showcased here and ion Andy Bells Video.
+- [Andy Bell - Be the browser’s mentor, not its micromanager ](https://www.youtube.com/watch?v=Iluhx2QWJDQ) - This video was recommenden on Frontendmentor and I get why. Gave me some interesting ideas to try out in my next projects.
